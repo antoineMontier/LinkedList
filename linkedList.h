@@ -7,14 +7,12 @@ typedef struct Cell {//missunderstanding of the difference between "." and "->"
 }Cell;
 
 typedef struct{
-  Cellule * head;
-  Cellule * queue;
+  Cell * head;
+  Cell * queue;
   int size;
 }List;
 
-void createCell(Cell *c);
-
-void setNext(Cell *prev, Cell *next);
+void linkCell(Cell *prev, Cell *next);//TO TRY ;; creat a link (copy the adress of next cell in the "next" field of prev cell)
 
 void setCell(Cell *c, int val);//OK, to check
 
@@ -30,10 +28,12 @@ void removeList(List *l);//implemented, to verify
 
 void insertHead(List *l, int x);//implemented, to verify
 
-void insertQueue(List*l, int x);
+void insertQueue(List*l, int x);//implemented, to try
 
-int isEmpty(List *l);
+int isEmpty(List *l);//implementes, to try
 
 int listSize(List *l);//implemented, to try
 
-void displayLis(List*l);
+void displayList(List*l);//OK, to try
+
+void bla();
