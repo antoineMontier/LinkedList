@@ -6,10 +6,6 @@ void createList(List *l){
   l->size = 0;
 }
 
-void bla(){
-  printf("ererererere");
-}
-
 void insertHead(List *l, int x){
   Cell * c = malloc(sizeof(Cell));
   c->val = x;
@@ -25,9 +21,8 @@ void insertHead(List *l, int x){
 }
 
 int listSize(List *l){
-  if(l == NULL){
+  if(l == NULL)
     return 0;
-  }
   return l-> size;
 }
 
@@ -48,11 +43,10 @@ void removeList(List*l){
 }
 
 int nextExists(Cell*c){
-  if(c->next != NULL){
+  if(c->next != NULL)
     return 1;
-  }else{
+  else
     return 0;
-  }
 }
 
 int getCell(Cell*c){
@@ -84,11 +78,10 @@ void linkCell(Cell *prev, Cell *next){
 }
 
 int isEmpty(List *l){
-  if(l->head == NULL && l->queue == NULL){
+  if(l->head == NULL && l->queue == NULL)
     return 1;
-  }else{
+  else
     return 0;
-  }
 }
 
 void displayList(List *l){
