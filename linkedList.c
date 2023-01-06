@@ -38,15 +38,14 @@ void removeList(List*l){
     l->head = p;
   }
   free(l->head);//free the last cell
-  free(p);//free the pointer used by the while loop
   free(l);//free the data of the list
+  l = NULL;
 }
 
 int nextExists(Cell*c){
   if(c->next != NULL)
     return 1;
-  else
-    return 0;
+  return 0;
 }
 
 int getCell(Cell*c){
@@ -78,10 +77,9 @@ void linkCell(Cell *prev, Cell *next){
 }
 
 int isEmpty(List *l){
-  if(l->head == NULL && l->queue == NULL)
+  if(l->head == NULL)
     return 1;
-  else
-    return 0;
+  return 0;
 }
 
 void displayList(List *l){
