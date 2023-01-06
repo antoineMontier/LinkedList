@@ -23,7 +23,7 @@ void insertHead(List *l, int x){
 int listSize(List *l){
   if(l == NULL)
     return 0;
-  return l-> size;
+  return l->size;
 }
 
 void displayCell(Cell*c){
@@ -31,13 +31,21 @@ void displayCell(Cell*c){
 }
 
 void removeList(List*l){
-  Cell *p;
+  if(l->size == 0){
+    free(l);
+    l = NULL;
+    return;
+  }
+    
+  Cell *p = l->head;
   while(p != NULL){//set the pointer as the next cell of the head then delete the head then set the head as the pointed cell then re-set p as the next cell of the head and so on
     p = l->head->next;
     free(l->head);
     l->head = p;
   }
   free(l->head);//free the last cell
+  l->head = NULL;
+  l->queue = NULL;
   free(l);//free the data of the list
   l = NULL;
 }
