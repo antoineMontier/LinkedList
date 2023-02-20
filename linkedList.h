@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+
 typedef struct Cell {//missunderstanding of the difference between "." and "->"
   int val;
   struct Cell * next;
