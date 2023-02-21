@@ -36,3 +36,4 @@ int isEmpty(List *l);//implementes, to try
 int listSize(List *l);//implemented, to try
 
 void displayList(List*l);//OK, to try
+
